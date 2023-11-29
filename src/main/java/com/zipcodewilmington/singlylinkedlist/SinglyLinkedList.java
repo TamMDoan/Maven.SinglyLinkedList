@@ -100,4 +100,15 @@ public class SinglyLinkedList<T>{
 
         return count;
     }
+
+    public SinglyLinkedList<T> copy(){
+        SinglyLinkedList<T> newList = new SinglyLinkedList<>();
+        Node node = head;
+        for(int i = 0; i < this.size(); i++){
+            newList.add(node.data);
+            node = node.next;
+        }
+
+        return newList;
+    }
 }

@@ -108,25 +108,25 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(num2, list.get(1));
     }
 
-//    @Test
-//    public void testSinglyLinkedListCopy(){
-//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-//        Integer num = 7;
-//        Integer num2 = 2;
-//        Integer num3 = 10;
-//        Integer num4 = 8;
-//        list.add(num);
-//        list.add(num2);
-//        list.add(num3);
-//        list.add(num4);
-//
-//        SinglyLinkedList<Integer> actual = list.copy();
-//
-//        Assert.assertEquals(list.get(0), actual.get(0));
-//        Assert.assertEquals(list.get(1), actual.get(1));
-//        Assert.assertEquals(list.get(2), actual.get(2));
-//
-//    }
+    @Test
+    public void testSinglyLinkedListCopy(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        Integer num = 7;
+        Integer num2 = 2;
+        Integer num3 = 10;
+        Integer num4 = 8;
+        list.add(num);
+        list.add(num2);
+        list.add(num3);
+        list.add(num4);
+
+        SinglyLinkedList<Integer> actual = list.copy();
+
+        Assert.assertEquals(list.get(0), actual.get(0));
+        Assert.assertEquals(list.get(1), actual.get(1));
+        Assert.assertEquals(list.get(2), actual.get(2));
+
+    }
 
     @Test
     public void testSinglyLinkedListSortInt(){
