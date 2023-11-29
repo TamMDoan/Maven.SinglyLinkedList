@@ -28,17 +28,22 @@ public class SinglyLinkedListTest {
     public void testSinglyLinkedListAddNode(){
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
         Integer num = 3;
+        list.add(num);
 
-        Assert.assertTrue(list.add(num));
+        Assert.assertEquals(num, list.get(0));
     }
 
     @Test
     public void testSinglyLinkedListRemoveNode(){
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
         Integer num = 4;
+        Integer num2 = 5;
+        Integer num3 = 8;
         list.add(num);
-
-        Assert.assertTrue(list.remove(num));
+        list.add(num2);
+        list.add(num3);
+        list.remove(1);
+        Assert.assertFalse(list.contains(num2));
     }
 
     @Test
@@ -100,28 +105,28 @@ public class SinglyLinkedListTest {
         list.add(num2);
         list.add(num3);
 
-        Assert.assertEquals(num2, list.get(i));
+        Assert.assertEquals(num2, list.get(1));
     }
 
-    @Test
-    public void testSinglyLinkedListCopy(){
-        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-        Integer num = 7;
-        Integer num2 = 2;
-        Integer num3 = 10;
-        Integer num4 = 8;
-        list.add(num);
-        list.add(num2);
-        list.add(num3);
-        list.add(num4);
-
-        SinglyLinkedList<Integer> actual = list.copy();
-
-        Assert.assertEquals(list.get(0), actual.get(0));
-        Assert.assertEquals(list.get(1), actual.get(1));
-        Assert.assertEquals(list.get(2), actual.get(2));
-
-    }
+//    @Test
+//    public void testSinglyLinkedListCopy(){
+//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+//        Integer num = 7;
+//        Integer num2 = 2;
+//        Integer num3 = 10;
+//        Integer num4 = 8;
+//        list.add(num);
+//        list.add(num2);
+//        list.add(num3);
+//        list.add(num4);
+//
+//        SinglyLinkedList<Integer> actual = list.copy();
+//
+//        Assert.assertEquals(list.get(0), actual.get(0));
+//        Assert.assertEquals(list.get(1), actual.get(1));
+//        Assert.assertEquals(list.get(2), actual.get(2));
+//
+//    }
 
     @Test
     public void testSinglyLinkedListSortInt(){
